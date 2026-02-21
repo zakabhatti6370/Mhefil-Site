@@ -44,8 +44,8 @@
     <div class="container">
       <ul>
         <li><a href="#home" class="active"><i class="fas fa-home"></i> ہوم</a></li>
-        <li><a href="#today"><i class="fas fa-mosque"></i> آج کی مجلس</a></li>
-        <li><a href="#upcoming"><i class="fas fa-calendar-week"></i> آنے والی مجالس</a></li>
+        <li><a href="#today"><i class="fas fa-mosque"></i> آج کی محفلِ</a></li>
+        <li><a href="#upcoming"><i class="fas fa-calendar-week"></i> آنے والی محفلِ</a></li>
         <li><a href="#gallery"><i class="fas fa-images"></i> گیلری</a></li>
         <li><a href="#about"><i class="fas fa-info-circle"></i> تعارف</a></li>
         <li><a href="#contact"><i class="fas fa-phone-alt"></i> رابطہ</a></li>
@@ -283,7 +283,7 @@
         </div>
         
         <div class="form-actions">
-          <button type="submit" class="submit-btn">مجلس شامل کریں</button>
+          <button type="submit" class="submit-btn">محفلِ شامل کریں</button>
           <button type="button" class="cancel-btn" onclick="closeModal()">منسوخ کریں</button>
         </div>
       </form>
@@ -294,12 +294,12 @@
   <div id="addMehfilModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeAddModal()">&times;</span>
-      <h2>نئی مجلس کا اضافہ کریں</h2>
+      <h2>نئی محفلِ کا اضافہ کریں</h2>
       <p class="modal-subtitle">دارالخیر ساہیوال سے اطلاع</p>
       
       <form id="quickAddForm" onsubmit="quickAddMehfil(event)">
         <div class="form-group">
-          <label>مجلس کا نام:</label>
+          <label>محفلِ کا نام:</label>
           <input type="text" id="quickTitle" placeholder="مثلاً: جمعرات کی مجلس" required>
         </div>
         
@@ -348,8 +348,8 @@
 <div id="historyModal" class="modal">
     <div class="modal-content history-modal">
         <span class="close" onclick="closeHistoryModal()">&times;</span>
-        <h2><i class="fas fa-history"></i> گذشتہ مجالس کی تاریخ</h2>
-        <p class="history-subtitle">گزشتہ 30 دن کی مجالس</p>
+        <h2><i class="fas fa-history"></i> گذشتہ محفلِ کی تاریخ</h2>
+        <p class="history-subtitle">گزشتہ 30 دن کی محفلِ</p>
         
         <div class="history-filters">
             <button class="filter-btn active" onclick="filterHistory('all')">تمام</button>
@@ -363,7 +363,7 @@
         
         <div class="history-actions">
             <button class="delete-all-btn" onclick="confirmDeleteAll()">
-                <i class="fas fa-trash-alt"></i> تمام پرانی مجالس حذف کریں
+                <i class="fas fa-trash-alt"></i> تمام پرانی محفلِ حذف کریں
             </button>
         </div>
     </div>
@@ -373,7 +373,7 @@
 <div id="deleteConfirmModal" class="modal">
     <div class="modal-content small">
         <h3>تصدیق کریں</h3>
-        <p>کیا آپ واقعی یہ مجلس حذف کرنا چاہتے ہیں؟</p>
+        <p>کیا آپ واقعی یہ محفلِ حذف کرنا چاہتے ہیں؟</p>
         <div class="confirm-actions">
             <button class="confirm-btn" onclick="confirmDelete()">ہاں، حذف کریں</button>
             <button class="cancel-btn" onclick="closeDeleteModal()">منسوخ کریں</button>
@@ -385,5 +385,6 @@
 </body>
 
 </html>
+
 
 
