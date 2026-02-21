@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دربار مرشدآباد شریف پشاور</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header with Islamic Design -->
+  <header class="header">
+    <div class="top-bar">
+      <div class="location-info">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>دارالخیر ساہیوال - دربار مرشدآباد شریف پشاور</span>
+      
+      </div>
+      <div class="date-info">
+        <i class="fas fa-calendar-alt"></i>
+        <span id="current-date"></span>
+      </div>
+    </div>
+    
+    <div class="main-header">
+      <div class="container">
+        <div class="logo-section">
+          <h1 class="urdu-text">دربار مرشدآباد شریف پشاور</h1>
+          <p class="subtitle">فیضانِ حضور مخدوم سید مرشد علی شاہ رحمتہ اللہ علیہ</p>
+          <img src="imges/Allah ho.png" alt="دربار مرشدآباد شریف پشاور">
+        </div>
+        
+        <!-- Admin Panel Button -->
+        <button class="admin-btn" onclick="openAdminPanel()">
+          <i class="fas fa-lock"></i> ایڈمن پینل
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav-menu">
+    <div class="container">
+      <ul>
+        <li><a href="#home" class="active"><i class="fas fa-home"></i> ہوم</a></li>
+        <li><a href="#today"><i class="fas fa-mosque"></i> آج کی مجلس</a></li>
+        <li><a href="#upcoming"><i class="fas fa-calendar-week"></i> آنے والی مجالس</a></li>
+        <li><a href="#gallery"><i class="fas fa-images"></i> گیلری</a></li>
+        <li><a href="#about"><i class="fas fa-info-circle"></i> تعارف</a></li>
+        <li><a href="#contact"><i class="fas fa-phone-alt"></i> رابطہ</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="ramzan-section" style="background: #1b4332; color: #fff; padding: 40px 0; text-align: center;">
+    <div class="container">
+      <h2 style="color: #ffca28; border-bottom: 2px solid #ffca28; display: inline-block; padding-bottom: 10px;">
+          <i class="fas fa-moon"></i> رمضان المبارک خصوصی محافل
+      </h2>
+      <div class="ramzan-grid" style="display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 30px;">
+        
+        <div class="ramzan-card" style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; width: 300px; margin: 10px;">
+          <h3 style="color: #ffca28;">محفلِ ذکر و تراویح</h3>
+          <p>بمقام: دربار مرشدآباد شریف</p>
+          <p>وقت: بعد نمازِ تراویح</p>
+          <span style="background: #ffca28; color: #000; padding: 2px 10px; border-radius: 5px; font-weight: bold;">روزانہ</span>
+        </div>
+  
+        <div class="ramzan-card" style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; width: 300px; margin: 10px;">
+          <h3 style="color: #ffca28;">درسِ قرآن و حدیث</h3>
+          <p>بمقام: دارالخیر ساہیوال</p>
+          <p>وقت: بعد نمازِ عصر</p>
+          <span style="background: #ffca28; color: #000; padding: 2px 10px; border-radius: 5px; font-weight: bold;">ہر اتوار</span>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <!-- Hero Section with Current Mehfil -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2 class="urdu-text">آج کی محفلِ کی خصوصی اطلاع</h2>
+      <div class="mehfil-card featured" id="featured-mehfil">
+        <!-- Dynamic content will load here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Area -->
+  <div class="main-container">
+    <div class="container">
+      <div class="content-wrapper">
+        <!-- Left Side - Today's Updates -->
+        <main class="main-content">
+          <!-- Today's Mehfil Section -->
+          <section class="section today-section" id="today">
+            <h2 class="section-title">
+              <i class="fas fa-clock"></i>
+              آج کی محفلِ
+            </h2>
+            <div class="mehfil-list" id="today-mehfils">
+              <!-- Dynamic mehfils will load here -->
+            </div>
+          </section>
+
+          <!-- Upcoming Mehfils -->
+          <section class="section upcoming-section" id="upcoming">
+            <h2 class="section-title">
+              <i class="fas fa-calendar-alt"></i>
+              آنے والی محفلِ
+            </h2>
+            <div class="mehfil-list" id="upcoming-mehfils">
+              <!-- Dynamic mehfils will load here -->
+            </div>
+          </section>
+        </main>
+
+        <!-- Right Sidebar - Quick Info -->
+        <aside class="sidebar">
+          <!-- Weekly Schedule -->
+          <div class="widget">
+            <h3 class="widget-title">
+              <i class="fas fa-clock"></i>
+              ہفتہ وار پروگرام
+            </h3>
+            <div class="schedule-list" id="weekly-schedule">
+              <!-- Dynamic schedule will load here -->
+            </div>
+          </div>
+
+          <!-- Important Contacts -->
+          <div class="widget">
+            <h3 class="widget-title">
+              <i class="fas fa-phone-alt"></i>
+              اہم رابطے
+            </h3>
+            <div class="contact-info">
+              <p><i class="fas fa-user-tie"></i> سجادہ نشین:+92 321 6931823</p>
+              <p><i class="fas fa-user"></i> منتظم: 0300-1234567</p>
+              <p><i class="fas fa-map-marker-alt"></i> پتہ: دربار مرشدآباد شریف, پشاور</p>
+              <p><i class="fas fa-city"></i> نمائندہ: دارالخیر ساہیوال</p>
+            </div>
+          </div>
+
+          <!-- Quick Add Button for Sahiwal -->
+          <div class="widget">
+            <button class="add-mehfil-btn" onclick="openAddMehfilModal()">
+              <i class="fas fa-plus-circle"></i>
+              نئی مجلس کا اضافہ کریں
+            </button>
+            <p class="note-text">(صرف منتظمین کے لیے)</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <h2 class="section-title">
+        <i class="fas fa-images"></i>
+        گیلری
+      </h2>
+      <div class="gallery-grid" id="gallery-grid">
+        <img src="images/hero1.jpg" alt="دربار مرشدآباد شریف" class="gallery-item" >
+        <img src="images/hero2.jpg" alt="مجلس ذکر" class="gallery-item" >
+        <img src="images/hero3.jpg" alt="خصوصی اجتماع" class="gallery-item" >
+        
+        <!-- Gallery images will load here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2 class="section-title">
+        <i class="fas fa-info-circle"></i>
+        تعارف
+      </h2>
+      <div class="about-content">
+        <div class="about-text">
+          <h3>دربار مرشدآباد شریف پشاور</h3>
+          <p>یہ مبارک دربار حضور مخدوم سید مرشد علی شاہ رحمتہ اللہ علیہ کا فیضان ہے۔ یہاں ہر ہفتے مختلف مجالس کا انعقاد کیا جاتا ہے جہاں ذکر و اذکار، درود شریف اور بیعت کی سعادت حاصل کی جاتی ہے۔</p>
+          <p>دارالخیر ساہیوال سے ہمارے بھائی باقاعدگی سے شرکت کرتے ہیں اور یہاں کی روحانی فضا سے مستفید ہوتے ہیں۔</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title">
+        <i class="fas fa-phone-alt"></i>
+        رابطہ کریں
+      </h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <i class="fas fa-phone"></i>
+          <h3>فون</h3>
+          <p>+92 321 6931823</p>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-whatsapp"></i>
+          <h3>واٹس ایپ</h3>
+          <p>0321-6926370</p>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>پتہ</h3>
+          <p>دربار مرشدآباد شریف، پشاور</p>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-city"></i>
+          <h3>دارالخیر ساہیوال</h3>
+          <p>نمائندہ: 0300-1234567</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>© 2026 دربار مرشدآباد شریف پشاور - جملہ حقوق محفوظ ہیں</p>
+        <p>برائے رابطہ: 0321-6926370 | daralkhair.sahiwal@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Admin Panel Modal -->
+  <div id="adminModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>ایڈمن پینل - نئی مجلس کا اضافہ</h2>
+      
+      <form id="addMehfilForm" onsubmit="addNewMehfil(event)">
+        <div class="form-group">
+          <label>تاریخ:</label>
+          <input type="date" id="mehfilDate" required>
+        </div>
+        
+        <div class="form-group">
+          <label>وقت:</label>
+          <input type="time" id="mehfilTime" required>
+        </div>
+        
+        <div class="form-group">
+          <label>مقام:</label>
+          <select id="mehfilLocation" required>
+            <option value="peshawar">دربار مرشدآباد شریف، پشاور</option>
+            <option value="sahiwal">دارالخیر ساہیوال</option>
+            <option value="other">دیگر</option>
+          </select>
+        </div>
+        
+        <div class="form-group" id="otherLocationGroup" style="display:none;">
+          <label>دیگر مقام لکھیں:</label>
+          <input type="text" id="otherLocation">
+        </div>
+        
+        <div class="form-group">
+          <label>مجلس کی قسم:</label>
+          <select id="mehfilType" required>
+            <option value="zikr">ذکر و اذکار</option>
+            <option value="durood">درود شریف</option>
+            <option value="bait">بیعت</option>
+            <option value="special">خصوصی مجلس</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>تفصیل:</label>
+          <textarea id="mehfilDescription" rows="3" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label>تصویر کا لنک (اختیاری):</label>
+          <input type="url" id="mehfilImage">
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">مجلس شامل کریں</button>
+          <button type="button" class="cancel-btn" onclick="closeModal()">منسوخ کریں</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Quick Add Modal for Sahiwal -->
+  <div id="addMehfilModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAddModal()">&times;</span>
+      <h2>نئی مجلس کا اضافہ کریں</h2>
+      <p class="modal-subtitle">دارالخیر ساہیوال سے اطلاع</p>
+      
+      <form id="quickAddForm" onsubmit="quickAddMehfil(event)">
+        <div class="form-group">
+          <label>مجلس کا نام:</label>
+          <input type="text" id="quickTitle" placeholder="مثلاً: جمعرات کی مجلس" required>
+        </div>
+        
+        <div class="form-group">
+          <label>تاریخ:</label>
+          <input type="date" id="quickDate" required>
+        </div>
+        
+        <div class="form-group">
+          <label>وقت:</label>
+          <input type="time" id="quickTime" required>
+        </div>
+        
+        <div class="form-group">
+          <label>مقام:</label>
+          <input type="text" id="quickPlace" value="دارالخیر ساہیوال" readonly>
+        </div>
+        
+        <div class="form-group">
+          <label>تفصیل:</label>
+          <textarea id="quickDesc" rows="2" placeholder="مجلس کی مختصر تفصیل"></textarea>
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">اطلاع بھیجیں</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hidden Admin Password Modal -->
+  <div id="passwordModal" class="modal">
+    <div class="modal-content small">
+      <h3>ایڈمن پاس ورڈ</h3>
+      <input type="password" id="adminPassword" placeholder="پاس ورڈ درج کریں">
+      <button onclick="verifyPassword()">تصدیق کریں</button>
+    </div>
+  </div>
+  <!-- History Modal Trigger Icon -->
+<div class="history-icon" onclick="openHistoryModal()">
+    <i class="fas fa-history"></i>
+    <span class="history-badge" id="historyCount">0</span>
+</div>
+
+<!-- History Modal -->
+<div id="historyModal" class="modal">
+    <div class="modal-content history-modal">
+        <span class="close" onclick="closeHistoryModal()">&times;</span>
+        <h2><i class="fas fa-history"></i> گذشتہ مجالس کی تاریخ</h2>
+        <p class="history-subtitle">گزشتہ 30 دن کی مجالس</p>
+        
+        <div class="history-filters">
+            <button class="filter-btn active" onclick="filterHistory('all')">تمام</button>
+            <button class="filter-btn" onclick="filterHistory('peshawar')">پشاور</button>
+            <button class="filter-btn" onclick="filterHistory('sahiwal')">ساہیوال</button>
+        </div>
+        
+        <div class="history-list" id="historyList">
+            <!-- History items will load here -->
+        </div>
+        
+        <div class="history-actions">
+            <button class="delete-all-btn" onclick="confirmDeleteAll()">
+                <i class="fas fa-trash-alt"></i> تمام پرانی مجالس حذف کریں
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div id="deleteConfirmModal" class="modal">
+    <div class="modal-content small">
+        <h3>تصدیق کریں</h3>
+        <p>کیا آپ واقعی یہ مجلس حذف کرنا چاہتے ہیں؟</p>
+        <div class="confirm-actions">
+            <button class="confirm-btn" onclick="confirmDelete()">ہاں، حذف کریں</button>
+            <button class="cancel-btn" onclick="closeDeleteModal()">منسوخ کریں</button>
+        </div>
+    </div>
+</div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
